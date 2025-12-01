@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dhhh Slayer</title>
+    <style>
+        
+        
+      /* ===== Hero Section ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #c51c34;
+
+ 
+}
+.hero-section {
+  
+  min-height: 100vh; 
+  padding: 100px 10%; 
+  background: #c51c34;
+  color: #151515;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+}
+
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: inline-block;
+  background-color: #151515;
+  color: #c51c34; /* brand accent */
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.4);
+}
+
+/* Right: Hero Image */
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+.hero-section{
+    padding: 100px 0px;
+}
+.hero-image img {
+max-width: 80%;
+}
+.hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .hero-cta {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}  
+  
+  
+  
+  /* ===== About Me Section ===== */
+.about-section {
+  padding: 80px 10%;
+  background-color: #f8f9fb; /* subtle light grey */
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.specialties {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.specialties li {
+  background-color: #151515;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #c51c34; /* brand accent */
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Right: Image */
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .specialties li {
+    font-size: 13px;
+  }
+}  
+
+
+/* ===== Projects / Portfolio Section ===== */
+.projects-section {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-items: center;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #f8f9fb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: center;
+}
+
+.project-button {
+  text-decoration: none;
+  background-color: #151515; /* brand accent */
+  color: #c51c34;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(106, 17, 203, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}    
+   
+   
+   /* ===== Testimonials Section ===== */
+.testimonials-section {
+  padding: 80px 10%;
+  background-color: #f4f5f7; /* soft tinted background */
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 350px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-quote {
+  font-size: 48px;
+  color: #c51c34; /* brand color */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  color: #333;
+}
+
+.testimonial-client {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.client-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #111;
+}
+
+.client-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .testimonial-text {
+    
+    text-align: center;
+    
+  }
+} 
+
+
+
+/* ===== CTA Section ===== */
+.cta-section {
+  padding: 100px 10%;
+  text-align: center;
+  background: #ffffff; /* clean full-width white background */
+}
+
+.cta-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  background: #151515; /* brand color */
+  color: #c51c34;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.25);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(106, 17, 203, 0.3);
+}
+
+/* Social Icons */
+.cta-socials {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icon {
+  font-size: 22px;
+  transition: 0.3s ease;
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}    
+    </style>
+</head>
+<body>
+  <!-- ===== Hero Section ===== -->
+<section class="hero-section">
+  <div class="hero-container">
+    <!-- Left: Text -->
+    <div class="hero-text">
+      <h2>I help brands get more quality leads, lower CPA, increase conversions and revenue through attention-grabbing ad creatives paired with persuasive, action-driving copy.</h2>
+     <!--  <p>Transforming ideas into powerful visuals and marketing strategies that drive measurable results for your business.</p>-->
+      <a href="#projects" class="hero-cta">View My Work</a>
+    </div>
+
+    <!-- Right: Image / Illustration -->
+    <div class="hero-image">
+      <img src="Hero image.png" alt="Hero Illustration">
+    </div>
+  </div>
+</section>  
+
+
+<!-- ===== About Me Section ===== -->
+<section class="about-section">
+  <div class="about-container">
+    <!-- Left: Text -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I'm Amaechi Promise, a graphic designer who specializes in helping brands get better ROAS with less ad spend, by designing attention-grabbing ad creatives and crafting powerful headlines that communicate your brand promise clearly and persuade your audience to take action; actions that eventually lead to a sale.</p>
+<p>
+Some of my past clients call me Dhhh Slayer (pronounced "Dee Slayer", short for "Dhighithal" Slayer) because I’m known for “slaying” the digital obstacles that stop brands from increasing their revenue.</p>
+
+<p>
+And yes, I’m fully trained in ad copywriting.
+That’s exactly how I’m able to come up with scroll-stopping writeups and persuasive words that turn cold viewers into warm prospects and warm prospects into paying customers.</p>
+
+<p>
+This unique blend of graphic design + strategic copywriting is what sets me apart from every other designer out there.</p>
+
+      <ul class="specialties">
+        <li>Ad Creative Design</li>
+        <li>Advertising Copywriting</li>
+        <li>Conversion Rate Optimization (CRO)</li>
+        <li>Performance Marketing Creative Strategy</li>
+      </ul>
+     
+    </div>
+
+    <!-- Right: Image -->
+    <div class="about-image">
+      <img src="About image.png" alt="About Me Photo">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== Projects / Portfolio Section ===== -->
+<section class="projects-section" id="projects">
+  <h2 class="projects-title">Projects I’ve Worked On</h2>
+  <div class="projects-grid">
+
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <img src="Project homepage 1.jpg" alt="Project 1">
+      <h3>Lead Generation Ad Creative</h3>
+      <p>I helped my client transform an overlooked product into a message Nigerians immediately connected with, turning low interest into steady, high-quality leads.</p>
+      <a href="Portfolio Page 1.html" class="project-button">View Case Study</a>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <img src="Project homepage 2.jpg" alt="Project 2">
+      <h3>Ad Creative Revamp</h3>
+      <p>I created a simple, trust-building ad that finally got Nigerian students to stop skipping, pay attention, and sign up for my client’s program.</p>
+      <a href="Portfolio page 2.html" class="project-button">View Case Study</a>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <img src="Project homepage 3.jpg" alt="Project 3">
+      <h3>Sports Event Promo Creative</h3>
+      <p>I helped my client turn a simple AFCON event announcement into a high-engagement, attention-grabbing promotional creative that pulled in crowds by leveraging the excitement of the Nigeria vs South Africa match.</p>
+      <a href="Portfolio page 3.html" class="project-button">View Case Study</a>
+    </div>
+
+ <!-- Project Card 4 -->
+    <div class="project-card">
+      <img src="Project homepage 4.jpg" alt="Project 4">
+      <h3>Awareness-Only Ad Creative Design</h3>
+      <p> I transformed a brief that had zero marketing messaging and zero sales strategy into a curiosity-driven visual that captured genuine attention and boosted engagement for a church’s crossover night.</p>
+      <a href="Portfolio page 4.html" class="project-button">View Case Study</a>
+    </div>
+    
+    
+ <!-- Project Card 5 -->
+    <div class="project-card">
+      <img src="Project homepage 5.jpg" alt="Project 5">
+      <h3>Event Ad Creative Design</h3>
+      <p>I created an emotion-driven visual ad that helped my client instantly capture attention and communicate the luxury vibe of a yacht party using minimal text.</p>
+      <a href="Portfolio page 5.html" class="project-button">View Case Study</a>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+<!-- ===== Testimonials Section ===== -->
+<section class="testimonials-section">
+  <h2 class="testimonials-title">What Clients Say</h2>
+  <div class="testimonials-grid">
+
+    <!-- Testimonial Card 1 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote">❝</div>
+      <p class="testimonial-text">
+        Dhhh Slayer completely transformed our ad performance. His creatives grabbed attention instantly, and the copy made our audience respond. Our cost per lead dropped without increasing ad spend.
+      </p>
+      <!-- <div class="testimonial-client">
+        <img src="https://via.placeholder.com/80" alt="Client Photo" class="client-photo">
+        <div class="client-info">
+          <h4>Jane Doe</h4>
+          <p>Marketing Manager, Acme Corp</p>
+        </div>
+      </div>-->
+    </div>
+
+    <!-- Testimonial Card 2 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote">❝</div>
+      <p class="testimonial-text">
+        We’ve worked with many designers, but none combine design and copy the way Dhhh Slayer does. His ads didn’t just look good, they converted. Our ROAS improved within the first week.
+      </p>
+      <!-- <div class="testimonial-client">
+        <img src="https://via.placeholder.com/80" alt="Client Photo" class="client-photo">
+        <div class="client-info">
+          <h4>John Smith</h4>
+          <p>CEO, Beta Solutions</p>
+        </div>
+      </div>-->
+    </div>
+
+
+<!-- Testimonial Card 3 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote">❝ </div>
+      <p class="testimonial-text">
+        
+       The level of strategy in his creatives is unmatched. Dhhh Slayer understood our message, simplified it, and delivered ads that brought in real customers. Highly reliable.
+      </p>
+      <!--  <div class="testimonial-client">
+        <img src="https://via.placeholder.com/80" alt="Client Photo" class="client-photo">
+        <div class="client-info">
+          <h4>John Smith</h4>
+          <p>CEO, Beta Solutions</p>
+        </div>
+      </div>-->
+    </div>
+    
+    
+<!-- Testimonial Card 4 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote">❝ </div>
+      <p class="testimonial-text"> 
+       
+        Before working with him, our ads struggled to get clicks. After his redesign, engagement shot up and our CPA went down. He knows exactly how to make people stop scrolling.
+      </p>
+     <!--   <div class="testimonial-client">
+        <img src="https://via.placeholder.com/80" alt="Client Photo" class="client-photo">
+        <div class="client-info">
+          <h4>John Smith</h4>
+          <p>CEO, Beta Solutions</p>
+        </div>
+      </div>-->
+    </div>
+
+
+<!-- Testimonial Card 5 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote">❝ </div>
+      <p class="testimonial-text"> 
+       
+        Dhhh Slayer is more than a designer, he’s a revenue driver. The combination of strong visuals and persuasive copy made our campaign profitable again. Worth every naira.
+      </p>
+      <!--  <div class="testimonial-client">
+        <img src="https://via.placeholder.com/80" alt="Client Photo" class="client-photo">
+        <div class="client-info">
+          <h4>John Smith</h4>
+          <p>CEO, Beta Solutions</p>
+        </div>
+      </div>-->
+    </div>
+
+
+
+
+  </div>
+</section>
+
+
+
+<!-- ===== CTA Section ===== -->
+<section class="cta-section">
+  <h2 class="cta-title">Want to work together?</h2>
+  <p class="cta-subtitle">
+    Let’s discuss how I can help your brand achieve results.
+  </p>
+
+  <a href="https://wa.link/18fvz9" class="cta-btn">Book a Call on WhatsApp</a>
+
+  <!--  <div class="cta-socials">
+    <a href="#" class="social-icon">🌐</a>
+    <a href="#" class="social-icon">📧</a>
+    <a href="#" class="social-icon">🔗</a>
+  </div>-->
+</section>
+</body>
+<!--
+#151515
+#c51c34
+-->
+</html>
