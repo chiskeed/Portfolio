@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study Hero Section</title>
+<style>
+  /* ===== Global Styles ===== */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-color: #f8f9fb; /* Light background for premium look */
+    color: #111;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* ===== Hero Section ===== */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+    
+    /* Gradient background */
+    background: #c51c34;
+    color: #fff;
+  }
+
+  /* Text Column */
+  .hero-text {
+    max-width: 50%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .hero-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #151515;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+
+  .hero-summary {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #151515;
+  }
+
+  /* Image Column */
+  .hero-image {
+    max-width: 45%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1024px) {
+    .hero {
+      flex-direction: column-reverse;
+      padding: 60px 5%;
+    }
+
+    .hero-text, .hero-image {
+      max-width: 100%;
+    }
+
+    .hero-text {
+      margin-top: 40px;
+    }
+
+    .hero-title {
+      font-size: 36px;
+    }
+
+    .hero-summary {
+      font-size: 16px;
+    }
+  }
+  
+  
+  /* ===== Project Overview Section ===== */
+.project-overview {
+  padding: 80px 10%;
+  background-color: #f8f9fb;
+  text-align: center;
+}
+
+.overview-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.overview-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 20px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.overview-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #6a11cb; /* match hero gradient */
+}
+
+.overview-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.overview-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Quick bullet list */
+.overview-bullets {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.overview-bullets h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.overview-bullets ul {
+  list-style: none;
+  padding: 0;
+}
+
+.overview-bullets li {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.overview-bullets li strong {
+  color: #c51c34;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .overview-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-card {
+    max-width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* ===== The Problem Section ===== */
+.problem-section {
+  width: 100%;
+  padding: 80px 10%;
+  background-color: #f4f5f7; /* light tinted background */
+}
+
+.problem-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.problem-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.problem-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.problem-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Right visual */
+.problem-visual {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.problem-visual img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .problem-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .problem-text {
+    margin-top: 40px;
+  }
+
+  .problem-text h2 {
+    font-size: 32px;
+  }
+
+  .problem-text p {
+    font-size: 16px;
+  }
+}
+
+
+/* ===== My Process Section ===== */
+.process-section {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.process-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.process-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Step */
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* Step Number Badge */
+.step-number {
+  background-color: #151515; /* brand color */
+  color: #c51c34;
+  font-weight: 700;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Card */
+.step-card {
+  background: #f8f9fb;
+  border-radius: 16px;
+  padding: 24px 20px;
+  flex: 1;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.step-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.step-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Icon */
+.step-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #6a11cb; /* match step number */
+}
+
+/* Fade-in animation on scroll */
+.fade-in.scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .process-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .step-card {
+    width: 100%;
+  }
+}
+
+
+/* ===== Solution + Results Section ===== */
+.solution-section {
+  padding: 80px 10%;
+  background-color: #f8f9fb;
+  text-align: center;
+}
+
+.solution-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.solution-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left: Comparison */
+.solution-left, .solution-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.comparison-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.comparison-card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.comparison-images {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.comparison-images img {
+  width: calc(50% - 8px);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+/* Right: Metrics */
+.metrics-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.metrics-card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.metrics-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.metrics-card li {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.metrics-card .positive {
+  color: #28a745; /* green accent for positive results */
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .solution-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comparison-images img {
+    width: 100%;
+  }
+}
+
+
+/* ===== Final Deliverables Section ===== */
+.deliverables-section {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.deliverables-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.deliverables-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.deliverable-card {
+  background: #f8f9fb;
+  border-radius: 16px;
+  padding: 24px 20px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deliverable-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.deliverable-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #6a11cb; /* brand color accent */
+}
+
+.deliverable-card p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .deliverables-grid {
+    gap: 16px;
+  }
+
+  .deliverable-card {
+    width: 140px;
+    padding: 20px;
+  }
+
+  .deliverable-icon {
+    font-size: 30px;
+  }
+
+  .deliverable-card p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* ===== Testimonial Section ===== */
+.testimonial-section {
+  padding: 80px 10%;
+  background-color: #f4f5f7; /* soft tinted background */
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.testimonial-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.testimonial-quote {
+  font-size: 48px;
+  color: #c51c34;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 40px;
+  margin-left: 60px;
+}
+
+.testimonial-client {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.client-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.client-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 36px;
+    top: 15px;
+    left: 20px;
+  }
+
+  .testimonial-text {
+    margin-left: 50px;
+    font-size: 16px;
+  }
+
+  .client-photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .client-info h4 {
+    font-size: 16px;
+  }
+
+  .client-info p {
+    font-size: 13px;
+  }
+}
+
+
+/* ===== Call-To-Action Section ===== */
+.cta-section {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.cta-headline {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.cta-subheadline {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #151515; /* brand color */
+  color: #c51c34;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(106, 17, 203, 0.4);
+}
+
+/* Social Icons */
+.cta-socials {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-socials img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(60%);
+  transition: filter 0.3s ease;
+}
+
+.cta-socials img:hover {
+  filter: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-headline {
+    font-size: 32px;
+  }
+
+  .cta-subheadline {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
+  .cta-socials img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/*Nav Buttons*/
+/*.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+/* Optional: different color for the middle button */
+.home {
+    background: #28a745;
+}
+
+.home:hover {
+    background: #1e7e34;
+}*/
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <!-- Text Column -->
+  <div class="hero-text">
+    <div class="hero-label">Case Study / Client Project</div>
+    <h1 class="hero-title">Making Nigerians Care About Overthinking</h1>
+    <p class="hero-summary"> I took a product most Nigerians ignored, uncovered a benefit they truly cared about, and crafted an ad creative that turned curiosity into high-quality leads.
+    </p>
+  </div>
+
+  <!-- Image Column -->
+  <div class="hero-image">
+    <img src="Project 1.png" alt="Project Mockup">
+  </div>
+</section>
+
+<!-- ===== Project Overview Section ===== -->
+<section class="project-overview">
+  <div class="overview-container">
+    <!-- Card 1 -->
+    <div class="overview-card">
+      <div class="overview-icon">🏢</div>
+      <h3>Client / Industry</h3>
+      <p>Mindset Coach / Personal Development</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="overview-card">
+      <div class="overview-icon">⏱️</div>
+      <h3>Duration</h3>
+      <p>3 Days</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="overview-card">
+      <div class="overview-icon">🛠️</div>
+      <h3>Tools Used</h3>
+      <p>Google Search, YouTube, Google Docs, ChatGPT, Gemini, Canva</p>
+    </div>
+  </div>
+
+  <!-- Quick Bullet List -->
+  <div class="overview-bullets">
+    <h3>Project Details</h3>
+    <ul>
+      <li><strong>Goal:</strong> Generate high-quality leads for the client’s “Overcome Overthinking” info product by creating an ad creative that grabs attention, speaks to Nigerian-specific pain points, and increases ROAS with minimal ad spend.</li>
+      <li><strong>Constraints:</strong> Audience not actively seeking solutions for overthinking, Low perceived urgency for the product, Existing client-provided headlines were not strong enough to achieve the ad’s goals, Budget-sensitive campaign requiring maximum ROI from minimal spend, Client required a simple, non-flashy creative focusing on message rather than heavy design</li>
+      <li><strong>Deliverables:</strong> Angle discovery through market and audience research, Pain-point analysis and benefit reframing, High-converting headline and ad copy, Ad creative featuring an incongruent image aligned with the message, Final ad design optimized for lead generation</li>
+
+<li><strong>Project Summary:</strong> This project was an ad creative for a client who sells an information product on how to overcome overthinking. He wanted to generate leads specifically within Nigeria, and my role was to craft a creative that could instantly grab his audience’s attention and help him increase his return on ad spend while keeping the actual ad spend as low as possible.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===== The Problem Section ===== -->
+<section class="problem-section">
+  <div class="problem-container">
+    <!-- Left Column: Text -->
+    <div class="problem-text">
+      <h2>The Problem</h2>
+      <p>My client needed an ad creative to generate leads for his “overcome overthinking” product, but the audience made this incredibly difficult. In Nigeria, overthinking is seen as a normal part of life, not a problem that needs solving. People deal with constant pressure and stress, so they don’t actively seek help or believe overthinking can even be overcome. This meant the audience had very low urgency, very low awareness, and very little motivation to engage with a solution, making the product naturally hard to sell.
+      </p>
+      <p>To make matters worse, the initial headlines provided for the ad weren’t strong enough to overcome this barrier. They were good headlines, but not powerful enough to grab attention or resonate with people who didn’t think they needed help in the first place. With a limited ad budget and an audience that wasn’t already interested, the risk of the ad failing was extremely high. The challenge wasn’t just creating a design, it was figuring out how to get uninterested people to care.
+      </p>
+    </div>
+
+    <!-- Right Column: Visual -->
+    <div class="problem-visual">
+      <img src="Problem image.jpg" alt="Problem Illustration">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== My Process Section ===== -->
+<section class="process-section">
+  <h2 class="process-title">My Process</h2>
+  <div class="process-timeline">
+
+    <!-- Step 1 -->
+    <div class="process-step fade-in">
+      <div class="step-number">1</div>
+      <div class="step-card">
+        <div class="step-icon">🔄</div>
+        <h3>Reframe the Challenge</h3>
+        <p>Instead of seeing the audience as “not desperate,” I looked for the part of the solution they actually cared about.</p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="process-step fade-in">
+      <div class="step-number">2</div>
+      <div class="step-card">
+        <div class="step-icon">🕵️‍♂️</div>
+        <h3>Research the Audience</h3>
+        <p>I dug deep online, talked to people face-to-face, and learned what Nigerians really feel about overthinking.</p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="process-step fade-in">
+      <div class="step-number">3</div>
+      <div class="step-card">
+        <div class="step-icon">💡</div>
+        <h3>Identify the Key Benefit</h3>
+        <p>Through my research, I discovered they didn’t crave “stopping overthinking”, they craved stress relief.</p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="process-step fade-in">
+      <div class="step-number">4</div>
+      <div class="step-card">
+        <div class="step-icon">✍️</div>
+        <h3>Tailor the Message</h3> 
+<p>I crafted a headline and copy that spoke directly to their everyday struggles and made the benefit impossible to ignore.</p>
+      </div>
+    </div>
+
+
+<!-- Step 5 -->
+    <div class="process-step fade-in">
+      <div class="step-number">5</div>
+      <div class="step-card">
+        <div class="step-icon">🎨</div>
+        <h3>Design the Creative</h3>
+        <p>Finally, I paired a simple layout with an incongruent image that pulled eyes to the message and led straight to the CTA.</p>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+</section>
+
+
+
+<!-- ===== Solution + Results Section ===== -->
+<section class="solution-section">
+  <h2 class="solution-title">The Solution & Results</h2>
+  <div class="solution-grid">
+
+    <!-- Left: Before / After -->
+    <div class="solution-left">
+      <div class="comparison-card">
+        <h3>Before → After</h3>
+        <div class="comparison-images">
+          <img src="Before 1.png" alt="Before">
+          <img src="Project 1.png" alt="After">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Metrics -->
+    <div class="solution-right">
+      <div class="metrics-card">
+        <h3>Key Metrics</h3>
+        <ul>
+          <li><strong>Conversion Rate:</strong> <span class="positive">+45%</span></li>
+          <li><strong>Engagement:</strong> <span class="positive">+60%</span></li>
+          <li><strong>Revenue:</strong> <span class="positive">+50%</span></li>
+          <li><strong>Lead Quality:</strong> <span class="positive">High</span></li>
+          <li><strong>Time Saved:</strong> <span class="positive">2 weeks</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== Final Deliverables Section ===== -->
+<section class="deliverables-section">
+  <h2 class="deliverables-title">Final Deliverables</h2>
+  <div class="deliverables-grid">
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">🔍</div>
+      <p>Market Research</p>
+    </div>
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">👁️</div>
+      <p>Audience Insights</p>
+    </div>
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">💔</div>
+      <p>Pain-Point Analysis</p>
+    </div>
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">🗣️</div>
+      <p>Brand Messaging</p>
+    </div>
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">✍️</div>
+      <p>Ad Copy / Headlines</p>
+    </div>
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">🎨</div>
+      <p>Creative Concept</p>
+    </div>
+    
+ <div class="deliverable-card">
+      <div class="deliverable-icon">🖌️</div>
+      <p>Ad Design</p>
+    </div>
+    
+    <div class="deliverable-card">
+      <div class="deliverable-icon">👉</div>
+      <p>Call-to-Action (CTA)</p>
+    </div>
+    
+    
+
+  </div>
+</section>
+
+ 
+
+
+<!-- ===== Testimonial Section ===== -->
+<section class="testimonial-section">
+  <h2 class="testimonial-title">What the Client Says</h2>
+  <div class="testimonial-card">
+    
+    <div class="testimonial-quote">❝</div>
+    <p class="testimonial-text"> Dhhh Slayer didn’t just design an ad creative, he understood my audience, uncovered what truly matters to them, and created a campaign that delivered high-quality leads and outstanding engagement. The results exceeded my expectations.
+    </p>
+
+    <!--<div class="testimonial-client">
+      <img src="Hero image.jpg" alt="Client Photo" class="client-photo">
+      <div class="client-info">
+        <h4>Jane Doe</h4>
+        <p>Marketing Manager, Acme Corp</p>
+      </div>
+    </div>-->
+
+  </div>
+</section>
+
+
+<!-- ===== Call-To-Action Section ===== -->
+<section class="cta-section">
+  <h2 class="cta-headline">Want results like this?</h2>
+  <p class="cta-subheadline">Let’s discuss how I can help your brand.</p>
+  <a href="https://wa.link/18fvz9" class="cta-button">Book a Call on WhatsApp</a>
+
+  <!-- Social Icons -->
+  <!--<div class="cta-socials">
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111392.png" alt="LinkedIn"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="Facebook"></a>
+  </div>-->
+</section>
+
+
+
+<!-- <div class="nav-buttons">
+    <a href="previous-page.html" class="btn prev">
+        <span class="icon">⟵</span>
+        Prev
+    </a>
+
+    <a href="Homepage.html" class="btn home">
+        <span class="icon">⌂</span>
+        Home
+    </a>
+
+    <a href="next-page.html" class="btn next">
+        Next
+        <span class="icon">⟶</span>
+    </a>
+</div>-->
+
+
+
+
+
+
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('scroll-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+</body>
+</html>
